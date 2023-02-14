@@ -1,0 +1,7 @@
+FROM jenkins/jenkins:lts
+# if we want to install via apt
+USER root
+RUN apt-get update --fix-missing && apt-get install -y make && apt install -y g++
+# drop back to the regular jenkins user - good practice
+USER jenkins
+
