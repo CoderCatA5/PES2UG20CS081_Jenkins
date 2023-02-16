@@ -10,7 +10,7 @@ pipeline{
         }
         stage('Build'){
             steps{
-                make -C main
+                sh 'make -C main'
             }
         }
 
