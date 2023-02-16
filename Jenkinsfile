@@ -8,11 +8,6 @@ pipeline{
                 url : 'https://github.com/CoderCatA5/PES2UG20CS081_Jenkins.git'
             }    
         }
-        stage('PreReq'){
-            steps{
-                sh 'apt-get update --fix-missing && apt-get install -y make && apt install -y g++ '
-            }
-        }
         stage('Build'){
             steps{
                 sh 'make -C main'
