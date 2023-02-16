@@ -13,6 +13,21 @@ pipeline{
                 sh 'make -C main'
             }
         }
-
+        stage('Test'){
+            steps{
+                sh 'main/hello_exec'
+            }
+        }
+        stage('Deploy'){
+            steps{
+        
+                sh 'echo "Running file" && main/hello_exec'
+            }
+        }
+    }
+    post{
+        failure{
+            sh 'echo "Pipeline Failed"'
+        }
     }
 }
