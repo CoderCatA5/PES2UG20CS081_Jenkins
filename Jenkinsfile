@@ -4,6 +4,7 @@ pipeline{
             image 'jenkins:pes2ug20cs081'
         }
     }
+
     stages{
         stage('Clone Repository'){
             steps{
@@ -15,21 +16,5 @@ pipeline{
             steps{
                 make -C main
             }
-        }
-        stage('Test'){
-            steps{
-                main/hello_exec
-            }
-        }
-        stage('Deploy'){
-            steps{
-                main/hello_exec
-            }
-        }
-        post{
-            failure{
-                echo 'Pipeline Failed'
-            }
-        }
     }
 }
