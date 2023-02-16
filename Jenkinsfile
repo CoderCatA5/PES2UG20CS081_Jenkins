@@ -1,9 +1,5 @@
 pipeline{
-    agent{
-        docker{
-            image 'jenkins:pes2ug20cs081'
-        }
-    }
+    agent any
 
     stages{
         stage('Clone Repository'){
