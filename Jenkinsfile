@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Test'){
             steps{
-                sh 'main/hello_exec oopsie'
+                sh 'main/hello_exec'
             }
         }
         stage('Deploy'){
