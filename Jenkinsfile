@@ -12,9 +12,5 @@ pipeline{
                 url : 'https://github.com/CoderCatA5/PES2UG20CS081_Jenkins.git'
             }    
         }
-        stage('Build'){
-            steps{
-                make -C main
-            }
     }
 }
